@@ -34,10 +34,20 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 
 //Sessions
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: false
+}))
 
 
 //Controllers
-
+const dogtoyControllers = require('./controllers/dogtoys')
+app.use('/maidenschoice',dogtoyControllers)
+const userControllers = require('./controllers/users')
+app.use('/users',userControllers)
+const sessionControllers = require('./controllers/sessions')
+app.use('/sessions',sessionControllers)
 
 
 app.listen(PORT, ()=>{
