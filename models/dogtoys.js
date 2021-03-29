@@ -4,7 +4,7 @@ const {Schema, model}=mongoose
 const dogtoySchema = new Schema({
   name: {type: String},
   brand: {type: String},
-  img: {type: String},
+  img: {type: Object},
   size: {type: Array},
   reviews:{type:Array}
 })

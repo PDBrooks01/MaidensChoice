@@ -52,6 +52,10 @@ const sessionControllers = require('./controllers/sessions')
 app.use('/sessions',sessionControllers)
 
 
+app.get('/',(req,res)=>{
+  res.redirect('/ratethis')
+})
+
 app.listen(PORT, ()=>{
   console.log('Server is ready to roll...');
 })

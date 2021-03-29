@@ -63,7 +63,7 @@ router.get('/seed',(req,res)=>{
 })
 
 //Show Route
-router.get('/:id',(req,res)=>{
+router.get('/:id',upload,(req,res)=>{
   Dogtoy.findById(req.params.id, (err, foundDogtoys)=>{
     res.render('show.ejs',{dogtoy:foundDogtoys, currentUser: req.session.currentUser })
   })
@@ -86,7 +86,7 @@ router.get('/:id/review',(req,res)=>{
 //   })
 
 router.post('/',upload, (req,res)=>{
-  req.body.img = req.file
+  req.body.img =  req.file.filename
   Dogtoy.create(req.body,(error,createdToy)=>{
     if (error){
       console.log(error)

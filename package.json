@@ -1,8 +1,8 @@
 {
   "name": "project2",
   "version": "1.0.0",
-  "engines":{
-    "node":"10.15.0"
+  "engines": {
+    "node": "10.15.0"
   },
   "description": "Web app where users can rate dog toys",
   "main": "server.js",
