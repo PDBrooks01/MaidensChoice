@@ -5,16 +5,42 @@ body{
   background-color: #f4f4f4;
   font-family: 'New Tegomin', serif;
 }
-a{
+
+/* Nav Bar */
+.header{
+  height: 70px;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.home{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.navi {
+  width:50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+}
+.user-options{
+  word-spacing: 5px;
+}
+
+.after-login{
+  word-spacing: 5px;
+}
+.add-toy{
+  /* color: white; */
   text-decoration: none;
-  color: #000;
 }
-a:hover{
-  color: purple;
-}
-a:visited{
-  color: #000;
-}
+
 .button{
   background-color: #003b00;
   color: #fff;
@@ -26,6 +52,9 @@ a:visited{
   background-color: white;
   border: 2px black solid;
 }
+
+
+
 .title {
   color: purple;
   text-align: center;
@@ -34,25 +63,48 @@ a:visited{
 
 }
 
-.toy-container {
+.container {
   padding: 20px 0 20px 0;
-  display: flex;
-  flex-flow: wrap;
-}
-.toy-container ul{
+  min-width: 30%;
   justify-content: space-evenly;
+}
+
+.toyList{
+  margin: 0 auto;
   list-style: none;
+  height: 350px;
+  display: flex;
+  margin: 10px;
+  align-items: baseline;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.toyLink{
+  text-decoration: none;
+  color: #000;
+}
+.toyLink:hover{
+  color: purple;
+}
+.toyLink:visited{
+  color: #000;
+}
+.toyItem{
+  align-items: center;
+  margin: 10px;
+}
+.toyName {
+  font-size: 15px;
+  text-align: center;
+}
+.toyImage{
+  width:350px;
+  height: 95%;
   padding: 0;
-
-}
-.toy-container img{
-  width: 50%;
-  height: 50%;
-  display: block;
 }
 
 
-.home{
+/* .home{
   float:none;
 }
 .navi li{
@@ -61,4 +113,4 @@ a:visited{
   list-style: none;
   border-bottom: 1px solid;
   float: right;
-}
+} */

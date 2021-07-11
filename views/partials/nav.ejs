@@ -1,26 +1,29 @@
-<nav>
+<nav class="header"
   <div>
-      <span>
-          <a href="/ratethis" class="home"> Homepage </a>
+      <span class="home">
+          <a href="/ratethis"> Homepage </a>
 
       </span>
 
       <ul class="navi">
 
           <% if (currentUser) { %>
+            <div class="after-login">
+              <li> Welcome <%= currentUser.username %>!</li> <br>
+              <a href="/ratethis/new" class="add-toy"> <button class="button">Add New Toy</button> </a> 
 
-              <li> Welcome <%= currentUser.username %> </li> <br>
-              <li><a href="/ratethis/new"> Add New Toy </a> </li>
-
-              <li>
+              <li class="logout">
                   <form action="/sessions?_method=DELETE" method="POST">
                       <button class="button">Log Out</button>
                   </form>
               </li>
+              </div>
           <% } else { %>
+            <div class="user-options">
               <li><a href="/sessions/new">Log In</a></li>
 
               <li><a href="/users/new">Sign Up</a></li>
+            </div>
           <% } %>
       </ul>
   </div>

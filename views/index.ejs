@@ -4,16 +4,17 @@
 
     <div class="title">
       <h1>Maiden's Choice!</h1>
-
     </div>
-    <div class="toy-container">
 
-
-    <ul>
+    <div class="container">
+    <ul class="toyList">
       <% for (let i = 0; i < dogtoys.length ; i++) { %>
-        <li>
-          <a href="/ratethis/<%=dogtoys[i].id%>"> <%=dogtoys[i].name%> </a>
-          <img src="images/<%=dogtoys[i].img%>" alt="Image of <%=dogtoys[i].name%>">
+        <li class="toyItem">
+          <p class="toyName"> <%=dogtoys[i].name%> </p>
+          <a href="/ratethis/<%=dogtoys[i].id%>" class="toyLink">
+            <img class="toyImage" src="images/<%=dogtoys[i].img%>" alt="Image of <%=dogtoys[i].name%>">
+
+          </a>
            <!-- <%# Need to add Star Rating %> -->
         </li>
       <%}%>
