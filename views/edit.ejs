@@ -7,12 +7,12 @@
     <form class="form" action="/maidenschoice/<%=dogtoy.id%>?_method=POST" method="POST" enctype="multipart/form-data">
       <label>
         <span  class="input">Name of Toy:</span>
-        <input type="text" name="name" value="<%=dogtoy.name%>"/>
+        <input type="text" name="name" value="<%=dogtoy.name%>" required/>
       </label>
 
       <label>
         <span class="input">Brand of Toy:</span>
-        <input type="text" name="brand" value="<%=dogtoy.brand%>"/>
+        <input type="text" name="brand" value="<%=dogtoy.brand%>" required/>
       </label>
 
       <label>
@@ -20,7 +20,7 @@
           <input type="text" name="img" value="<%=dogtoy.img%>"/>
         <p> OR </p> -->
         <p class="input">Upload Toy Image</p>
-       <input type="file" name="img" >
+       <input type="file" name="img" required >
       </label>
 
       <!-- <label>

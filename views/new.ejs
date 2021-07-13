@@ -7,18 +7,18 @@
     <form class="form" action="/maidenschoice" method="POST" enctype="multipart/form-data">
       <label>
         <span class="input">Name of Toy:</span>
-        <input type="text" name="name"/>
+        <input type="text" name="name" required/>
       </label>
 
       <label>
         <span class="input">Brand of Toy:</span>
-        <input type="text" name="brand"/>
+        <input type="text" name="brand" required/>
       </label>
 
       <label>
         <span class="input">Image of Toy:</span>
         <!-- Link <input type="text" name="img" placeholder="Insert Link Here"> -->
-        <input type="file" name="img" >
+        <input type="file" name="img"  required>
         <!-- <input type="submit" value="upload"> -->
       </label>
 
