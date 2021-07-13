@@ -233,7 +233,7 @@ body{
   justify-content: baseline;
 
 }
-.review-input{
+.input{
   display: flex;
   align-content: flex-start;
 }
@@ -243,6 +243,13 @@ textarea{
 }
 
 
+/* Edit Page */
+.edit-title{
+  max-width: 65%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 25px;
+}
 
 .footer {
   text-align: center;

@@ -58,7 +58,7 @@ router.get('/seed',(req,res)=>{
     if (err) {
       console.log(err)
     }
-    res.redirect('/ratethis')
+    res.redirect('/maidenschoice')
   })
 })
 
@@ -93,7 +93,7 @@ router.post('/',upload, (req,res)=>{
       res.send(error)
     }else {
       // console.log(createdToy)
-      res.redirect('/ratethis')
+      res.redirect('/maidenschoice')
     }
   })
 })
@@ -115,23 +115,27 @@ router.delete('/:id',upload,(req,res)=>{
     if (err) {
       console.log(err)
     }else {
-      res.redirect('/ratethis')
+      res.redirect('/maidenschoice')
     }
   })
 })
 
 //Edit Route
-router.get('/:id/edit',(req,res)=>{
+router.get('/edit/:id',(req,res)=>{
   Dogtoy.findById(req.params.id,(err,foundDogtoys)=>{
     res.render('edit.ejs',{ dogtoy:foundDogtoys, currentUser: req.session.currentUser })
   })
 })
 
 //Update Route
-router.put('/:id',upload,(req,res)=>{
+router.post('/:id',upload,(req,res)=>{
   req.body.img = req.file.filename
-  Dogtoy.findByIdAndUpdate(req.params.id,req.body,{new:true},(err,updatedToy)=>{
-    res.redirect('/ratethis')
+  Dogtoy.findByIdAndUpdate(req.params.id,req.body,(err,updatedToy)=>{
+    if(err){
+      console.log(err);
+    }else{
+      res.redirect(`/maidenschoice/${req.params.id}`)
+    }
   })
 })
 

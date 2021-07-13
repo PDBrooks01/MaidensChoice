@@ -6,7 +6,7 @@
     <img src="/images/<%=dogtoy.img%>" alt="Image of <%=dogtoy.name%>" class="showImage">
   </div>
     <div class="btn-group">
-      <button class="edit-btn btn"><a href="/maidenschoice/<%=dogtoy.id%>/edit">Edit Toy</a></button>
+      <button class="edit-btn btn"><a href="/maidenschoice/edit/<%=dogtoy.id%>">Edit Toy</a></button>
       <form action="/maidenschoice/<%=dogtoy.id%>?_method=DELETE" method="post" enctype="multipart/form-data">
         <button class="del-btn btn">Delete this toy</button>
       </form>
@@ -22,7 +22,7 @@
         <input type="text" name="username" placeholder="Shredder1234">
       </div>
       <div >
-        <label class="review-input">Review: </label>
+        <label class="input">Review: </label>
         <textarea name="review" rows ="4" placeholder="Example:I bought this a month ago and am so happy that I did..."></textarea>
       </div>
       <input class="button" type="submit" value="Post Review">

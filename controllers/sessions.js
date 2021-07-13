@@ -19,7 +19,7 @@ router.post('/',(req,res)=>{
         if (bcrypt.compareSync(req.body.password,foundUser.password)) {
           //login user and creat session
           req.session.currentUser = foundUser
-          res.redirect('/ratethis')
+          res.redirect('/maidenschoice')
 
         }else {
           res.send('<h1>Invalid Password</h1>')
@@ -36,7 +36,7 @@ router.post('/',(req,res)=>{
 //logout route
 router.delete('/',(req,res)=>{
   req.session.destroy(()=>{
-    res.redirect('/ratethis')
+    res.redirect('/maidenschoice')
   })
 })
 

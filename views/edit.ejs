@@ -1,32 +1,34 @@
 <%- include('./partials/header.ejs') %>
   <%- include('./partials/nav.ejs') %>
 
-    <div class="top">
+    <div class="edit-title">
       <h3>Editing <%=dogtoy.name%> </h3>
     </div>
-    <form class="editForm" action="/maidenschoice/<%=dogtoy.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <form class="form" action="/maidenschoice/<%=dogtoy.id%>?_method=POST" method="POST" enctype="multipart/form-data">
       <label>
-        <span>Name of Toy:</span>
+        <span  class="input">Name of Toy:</span>
         <input type="text" name="name" value="<%=dogtoy.name%>"/>
       </label>
 
       <label>
-        <span>Brand of Toy:</span>
+        <span class="input">Brand of Toy:</span>
         <input type="text" name="brand" value="<%=dogtoy.brand%>"/>
       </label>
 
       <label>
-        <span>Image of Toy:</span>
-        <!-- <input type="text" name="img" value="<%=dogtoy.img%>"/> -->
+        <!-- <span class="input">Toy Image URL:</span>
+          <input type="text" name="img" value="<%=dogtoy.img%>"/>
+        <p> OR </p> -->
+        <p class="input">Upload Toy Image</p>
        <input type="file" name="img" >
       </label>
 
-      <label>
-        <span>Size of Dog:</span>
+      <!-- <label>
+        <span class="input">Size of Dog:</span>
         <input type="number" name="size" value="<%=dogtoy.size%>"/>
-      </label>
-      <br>
-      <input class="button" type="submit" value="Update Toy"/>
+      </label> -->
+
+      <button>Update Toy</button>
     </form>
 
     <a href="/maidenschoice/<%=dogtoy.id%>" class="back-button" >Back</a>
