@@ -44,8 +44,8 @@ Routes<br>
 -edit  - Toy/review? Need to decided how to proceed<br>
 -Destroy - delete review ^^^^<br>
 
-WireFrames
-￼<img width="621" alt="Rate This" src="https://user-images.githubusercontent.com/75276378/125528062-36cbc9c7-ac69-43a6-b7ce-e6987271dde4.png">
-￼<img width="641" alt="What did your pup think of the toy" src="https://user-images.githubusercontent.com/75276378/125528146-b9a85824-0a58-40c8-91ca-067ffb2f83b4.png">
-￼<img width="351" alt="Add New Toy for Review" src="https://user-images.githubusercontent.com/75276378/125528162-83007891-17f2-444d-a5a4-fdc9541dbda9.png">
+WireFrames<br>
+￼<img width="621" alt="Rate This" src="https://user-images.githubusercontent.com/75276378/125528062-36cbc9c7-ac69-43a6-b7ce-e6987271dde4.png"><br>
+￼<img width="641" alt="What did your pup think of the toy" src="https://user-images.githubusercontent.com/75276378/125528146-b9a85824-0a58-40c8-91ca-067ffb2f83b4.png"><br>
+￼<img width="351" alt="Add New Toy for Review" src="https://user-images.githubusercontent.com/75276378/125528162-83007891-17f2-444d-a5a4-fdc9541dbda9.png"><br>
 ￼![RESTful Routes](https://user-images.githubusercontent.com/75276378/125528179-1a1f9348-d342-4e4a-af80-86ad932ea0f0.jpeg)
