@@ -4,7 +4,7 @@
     <div class="top">
       <h3>Editing <%=dogtoy.name%> </h3>
     </div>
-    <form class="editForm" action="/ratethis/<%=dogtoy.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <form class="editForm" action="/maidenschoice/<%=dogtoy.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
       <label>
         <span>Name of Toy:</span>
         <input type="text" name="name" value="<%=dogtoy.name%>"/>
@@ -29,6 +29,6 @@
       <input class="button" type="submit" value="Update Toy"/>
     </form>
 
-    <a href="/ratethis/<%=dogtoy.id%>" class="back-button" >Back</a>
+    <a href="/maidenschoice/<%=dogtoy.id%>" class="back-button" >Back</a>
 
 <%- include('./partials/footer.ejs') %>

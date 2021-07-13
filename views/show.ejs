@@ -2,9 +2,9 @@
 <%- include('./partials/nav.ejs') %>
 
     <h3> <%=dogtoy.name%> </h3>
-    <button><a href="/ratethis/<%=dogtoy.id%>/edit">Edit Toy</a></button>
+    <button><a href="/maidenschoice/<%=dogtoy.id%>/edit">Edit Toy</a></button>
 
-    <form action="/ratethis/<%=dogtoy.id%>?_method=DELETE" method="post" enctype="multipart/form-data">
+    <form action="/maidenschoice/<%=dogtoy.id%>?_method=DELETE" method="post" enctype="multipart/form-data">
       <button>Delete this toy</button>
     </form>
     <h4> Brand: <%=dogtoy.brand%> </h4>
@@ -24,7 +24,7 @@
     <script>
       function doComment(form){
         $.ajax({
-        url:"/ratethis/<%=dogtoy.id%>",
+        url:"/maidenschoice/<%=dogtoy.id%>",
         method:"POST",
         data:{username: form.username.value, comment:form.review.value, success: function(response){alert(response)}}
       })
@@ -43,5 +43,6 @@
 
 
 
-    <a href="/ratethis" class="back-button" >Back to Main</a>
+    <a href="/maidenschoice" class="back-button" >Back to Home</a>
+
 <%- include('./partials/footer.ejs') %>

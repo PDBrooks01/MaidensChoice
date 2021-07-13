@@ -1,7 +1,7 @@
 <nav class="header"
   <div>
       <span class="home">
-          <a href="/ratethis"> Homepage </a>
+          <a href="/maidenschoice"> Homepage </a>
 
       </span>
 
@@ -10,7 +10,7 @@
           <% if (currentUser) { %>
             <div class="after-login">
               <li> Welcome <%= currentUser.username %>!</li> <br>
-              <a href="/ratethis/new" class="add-toy"> <button class="button">Add New Toy</button> </a> 
+              <a href="/maidenschoice/new" class="add-toy"> <button class="button">Add New Toy</button> </a> 
 
               <li class="logout">
                   <form action="/sessions?_method=DELETE" method="POST">

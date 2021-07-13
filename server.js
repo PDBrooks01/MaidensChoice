@@ -45,7 +45,7 @@ app.use(session({
 
 //Controllers
 const dogtoyControllers = require('./controllers/dogtoys')
-app.use('/ratethis',dogtoyControllers)
+app.use('/maidenschoice',dogtoyControllers)
 const userControllers = require('./controllers/users')
 app.use('/users',userControllers)
 const sessionControllers = require('./controllers/sessions')
@@ -53,7 +53,7 @@ app.use('/sessions',sessionControllers)
 
 
 app.get('/',(req,res)=>{
-  res.redirect('/ratethis')
+  res.redirect('/maidenschoice')
 })
 
 app.listen(PORT, ()=>{
