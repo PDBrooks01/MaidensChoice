@@ -1,17 +1,19 @@
 <%- include('./partials/header.ejs') %>
 <%- include('./partials/nav.ejs') %>
+  <div class="show">
+    <h2 class="showName"> <%=dogtoy.name%> </h2>
+    <p class="brandName"> Brand: <%=dogtoy.brand%> </p>
+    <img src="/images/<%=dogtoy.img%>" alt="Image of <%=dogtoy.name%>" class="showImage">
+  </div>
+    <div class="btn-group">
+      <button class="edit-btn btn"><a href="/maidenschoice/<%=dogtoy.id%>/edit">Edit Toy</a></button>
+      <form action="/maidenschoice/<%=dogtoy.id%>?_method=DELETE" method="post" enctype="multipart/form-data">
+        <button class="del-btn btn">Delete this toy</button>
+      </form>
+    </div>
 
-    <h3> <%=dogtoy.name%> </h3>
-    <button><a href="/maidenschoice/<%=dogtoy.id%>/edit">Edit Toy</a></button>
 
-    <form action="/maidenschoice/<%=dogtoy.id%>?_method=DELETE" method="post" enctype="multipart/form-data">
-      <button>Delete this toy</button>
-    </form>
-    <h4> Brand: <%=dogtoy.brand%> </h4>
-    <img src="/images/<%=dogtoy.img%>" alt="Image of <%=dogtoy.name%>">
-
-
-
+<div class="review-container">
     <h4>Add New Review for <%=dogtoy.name%> </h4>
     <form method="post" onsubmit="return doComment(this)">
       <input type="hidden" name="reviews">
@@ -39,7 +41,7 @@
 
     <%})%>
 
-
+</div>
 
 
 
