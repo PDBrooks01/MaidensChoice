@@ -64,18 +64,10 @@ body{
 
 }
 
-.container {
-  padding: 20px 0 20px 0;
-  min-width: 30%;
-  justify-content: space-evenly;
-  align-content: center;
-
-}
-
 .toyList{
   margin: 0 auto;
   list-style: none;
-  height: 350px;
+  height: 100%;
   display: flex;
   margin: 10px;
   align-items: baseline;
@@ -252,11 +244,8 @@ textarea{
 }
 
 .footer {
-  text-align: center;
-  margin: 0 auto;
-  height: 50px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  position: relative;
 }
