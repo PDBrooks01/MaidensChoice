@@ -222,16 +222,34 @@ body{
   z-index: 1;
   margin: 0 auto;
   text-align: center;
+  min-width: 350px;
+  max-width: 60%;
+}
+
+.username-review{
+  align-content: center;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: baseline;
+
+}
+.review-input{
+  display: flex;
+  align-content: flex-start;
+}
+textarea{
+  align-self:stretch;
+  width:100%;
 }
 
 
 
 .footer {
   text-align: center;
-  /* position: fixed; */
+  margin: 0 auto;
   height: 50px;
   bottom: 0px;
   left: 0px;
   right: 0px;
-  margin-bottom: 0px;
+
 }

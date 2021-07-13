@@ -15,12 +15,16 @@
 
 <div class="review-container">
     <h4>Add New Review for <%=dogtoy.name%> </h4>
-    <form method="post" onsubmit="return doComment(this)">
+    <form method="post" onsubmit="return doComment(this)" class="review-form">
       <input type="hidden" name="reviews">
-      <label>Username: </label>
-      <input type="text" name="username" placeholder="Shredder1234"><br>
-      <label>Review: </label> <br>
-      <textarea name="review" rows ="4" placeholder="Example:I bought this a month ago and am so happy that I did..."></textarea>
+      <div class="username-review">
+        <label>Username: </label>
+        <input type="text" name="username" placeholder="Shredder1234">
+      </div>
+      <div >
+        <label class="review-input">Review: </label>
+        <textarea name="review" rows ="4" placeholder="Example:I bought this a month ago and am so happy that I did..."></textarea>
+      </div>
       <input class="button" type="submit" value="Post Review">
     </form>
     <script>
