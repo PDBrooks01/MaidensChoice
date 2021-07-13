@@ -1,32 +1,32 @@
   <%- include('./partials/header.ejs') %>
   <%- include('./partials/nav.ejs') %>
 
-    <div class="top">
-      <h3>Add a new toy</h3>
+    <div class="edit-title">
+      <h3>Add A New Toy</h3>
     </div>
-    <form action="/maidenschoice" method="POST" enctype="multipart/form-data">
+    <form class="form" action="/maidenschoice" method="POST" enctype="multipart/form-data">
       <label>
-        <span>Name of Toy:</span>
+        <span class="input">Name of Toy:</span>
         <input type="text" name="name"/>
       </label>
 
       <label>
-        <span>Brand of Toy:</span>
+        <span class="input">Brand of Toy:</span>
         <input type="text" name="brand"/>
       </label>
 
       <label>
-        <span>Image of Toy:</span>
-        Link <input type="text" name="img" placeholder="Insert Link Here">
-        OR  <input type="file" name="img" >
+        <span class="input">Image of Toy:</span>
+        <!-- Link <input type="text" name="img" placeholder="Insert Link Here"> -->
+        <input type="file" name="img" >
         <!-- <input type="submit" value="upload"> -->
       </label>
 
-      <label>
-        <span>Size of Dog:</span>
+      <!-- <label>
+        <span class="input">Size of Dog:</span>
         <input type="number" name="size"/>
-      </label>
-      <br>
-      <input class="button" type="submit" value="Add Toy"/>
+      </label> -->
+
+      <button>Add Toy</button>
     </form>
     <%- include('./partials/footer.ejs') %>
