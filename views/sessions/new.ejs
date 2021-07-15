@@ -4,6 +4,11 @@
   <h4 class="login-title">Log In</h4>
 
     <form action="/sessions" method="POST" class="login-form">
+      <% if (typeof status === 404){ %>
+          <p class="errorMsg"> Invalid Username or Password </p>
+        <%} else if (typeof status ===400) {%>
+          <p> User does not exist</p>
+      <%}%>
       <input type="text" name="username"  placeholder="Username" required/>
       <input type="password" name="password" placeholder="Password" required/>
       <button> Log In</button>

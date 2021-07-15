@@ -22,10 +22,10 @@ router.post('/',(req,res)=>{
           res.redirect('/maidenschoice')
 
         }else {
-          res.send('<h1>Invalid Password</h1>')
+          res.redirect('/sessions/new')
         }
       }else {
-        res.send("<h1>Invalid Username</h1>")
+        res.send("<p>Invalid Username or Password</p>")
       }
     }
   })

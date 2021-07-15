@@ -19,8 +19,11 @@ router.post('/',(req,res)=>{
     if (err) {
       console.log(err);
     }else {
-    res.render('/maidenschoice')
+    res.status(200).render('sessions/new.ejs',{
+      currentUser: req.session.currentUser
+    })
     }
+
   })
 })
 
